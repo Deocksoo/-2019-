@@ -95,7 +95,6 @@ int FindNode(List *plist, ElementType key)
         }
         plist->before = plist->cur;
         plist->cur = plist->cur->next;
-        printf("cur : %d , before : %d\n", plist->cur, plist->before);
     }
     return FALSE;
 }

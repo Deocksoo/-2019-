@@ -39,13 +39,12 @@ int FindNode(List *plist, ElementType key_element)
 int FindPrevNode(List *plist, ElementType key)
 {
     // key값을 element로 하는 node의 앞의 node를 찾는다.
-    // 해당 node가 존재하고, node에 
     return 0;
 }
 
 // 2
 int IsEmpty(List *plist)
 {
-    // list가 비어있으면 1을, 비어있지 않으면 0을 리턴해준다.
+    // list가 비어있으면 1을, 비어있지 않으면 0을 return 한다.
     return 0;
 }
