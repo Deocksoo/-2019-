@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "LinkedList.h"
 
-void ExecuteListOp(List *plist, char *buffer)
+void ExecuteListOp(List* plist, char* buffer)
 {
     char command;
     int new_element;
@@ -21,7 +21,7 @@ void ExecuteListOp(List *plist, char *buffer)
             break;
         case 'f':
             sscanf(buffer, "%c %d", &command, &key);
-            FindPrevNode(plist, key);
+            PrintPreviousKeyOf(plist, key);
             break;
         case 'p':
             PrintList(plist);

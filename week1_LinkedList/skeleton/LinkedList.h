@@ -21,9 +21,9 @@ typedef LinkedList List;
 
 void InitList(List *plist);
 int IsEmpty(List *plist);
-int FindPrevNode(List *plist, ElementType key);
 void LInsert(List *plist, ElementType new_element, ElementType key);
 void LDelete(List *plist, ElementType key);
 void PrintList(List *plist);
+void PrintPreviousKeyOf(List *plist, ElementType key);
 
 #endif
