@@ -4,7 +4,7 @@
 #include "LinkedList.h"
 #include "Slot.h"
 
-typedef int HashFunc(Value value, float constant_a, int m);
+typedef int HashFunc(Key key, float constant_a, int m);
 
 typedef struct _table
 {

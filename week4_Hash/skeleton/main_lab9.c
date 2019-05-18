@@ -3,9 +3,8 @@
 
 #define MAX_BUFFER_SIZE 10
 
-int hashFunc(Value value, float constant_a, int m) {
-    int temp = (int)(m * ((value * constant_a) - (int)(value * constant_a)));
-    return temp;
+int hashFunc(Key key, float constant_a, int m) {
+    return (int) (m * ((key * constant_a) - (int) (key * constant_a)));
 }
 
 void ExecuteHashingOp(Table *ptable, char *buffer)
@@ -42,7 +41,7 @@ int main(int argc, char const *argv[])
 {
     Table table;
     char buffer[MAX_BUFFER_SIZE];
- 
+
     while (1) {
         if (fgets(buffer, sizeof(buffer), stdin) == NULL) break;
         
