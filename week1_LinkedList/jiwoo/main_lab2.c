@@ -12,12 +12,10 @@ void ExecuteListOp(List* plist, char* buffer)
         case 'i':
             sscanf(buffer, "%c %d %d", &command, &new_element, &key);
             LInsert(plist, new_element, key);
-            PrintList(plist);
             break;
         case 'd':
             sscanf(buffer, "%c %d", &command, &key);
             LDelete(plist, key);
-            PrintList(plist);
             break;
         case 'f':
             sscanf(buffer, "%c %d", &command, &key);
@@ -37,6 +35,7 @@ int main(int argc, const char *argv[])
     char buffer[10];
 
     InitList(&list);
+    IsEmpty(&list);
 
     while(1){
         if(fgets(buffer, sizeof(buffer), stdin) == NULL) break;
