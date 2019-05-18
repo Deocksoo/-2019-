@@ -64,7 +64,7 @@ void PrintList(List *plist)
 
     plist->cur = plist->head;
     while (plist->cur != NULL) {
-        printf("-> %d ", plist->cur->element);
+        printf("-> %d ", plist->cur->element.val);
         plist->cur = plist->cur->next;
     }
 }

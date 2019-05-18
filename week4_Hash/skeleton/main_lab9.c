@@ -4,8 +4,7 @@
 #define MAX_BUFFER_SIZE 10
 
 int hashFunc(Value value, float constant_a, int m) {
-    int temp = (int)(m * ((value * constant_a) - (int)(value * constant_a)));
-    return temp;
+    return (int) (m * ((value * constant_a) - (int) (value * constant_a)));
 }
 
 void ExecuteHashingOp(Table *ptable, char *buffer)

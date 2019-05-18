@@ -9,7 +9,7 @@ typedef int HashFunc(Value value, float constant_a, int m);
 typedef struct _table
 {
     int hash_size;
-    List *tbl;
+    List **tbl;
     HashFunc *hf;
     float constant_a;
 } Table;
