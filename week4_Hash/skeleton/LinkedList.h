@@ -1,10 +1,12 @@
 #ifndef __LINKED_LIST_H__
 #define __LINKED_LIST_H__
 
+#include "Slot.h"
+
 #define TRUE    1
 #define FALSE   0
 
-typedef int ElementType;
+typedef Slot ElementType;
 
 typedef struct _node
 {
@@ -24,12 +26,9 @@ typedef LinkedList List;
 
 void InitList(List *plist);
 int IsEmpty(List *plist);
-int LCount(List *plist);
-int FindNode(List *plist, ElementType key);
-int FindPrevNode(List *plist, ElementType key);
-void LInsert(List *plist, ElementType new_element, ElementType key);
-void LDelete(List *plist, ElementType key);
-void DeleteList(List *plist);
+int FindNode(List *plist, Key key);
+int LInsert(List *plist, ElementType new_element);
+int LDelete(List *plist, Key key);
 void PrintList(List *plist);
 
 #endif
